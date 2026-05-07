@@ -256,8 +256,8 @@
     gaps: (0, 8),
     active_hint: 3,
     window_hint: Some((
-        red: 0.69590586,
-        green: 0.5043606,
-        blue: 0.66078603,
+        red: 0.5000989,
+        green: 0.4957593,
+        blue: 0.3698467,
     )),
 )
