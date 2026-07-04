@@ -107,12 +107,30 @@ source $ZSH/oh-my-zsh.sh
 alias vi="nvim"
 alias sleep="poweroff"
 alias rbt="reboot"
-alias upgrade="sudo apt update && sudo apt upgrade -y"
-alias tetris=TERM=xterm-256color /snap/bin/tetris-thefenriswolf.tetris
-
+alias upgrade="sudo apt update && sudo apt upgrade -y" #in caso stiao utilizzando apt
+alias tetris="TERM=xterm-256color /snap/bin/tetris-thefenriswolf.tetris"
+alias clear="paclear -c yellow -s 4"
 
 
 export EDITOR=nvim
 export VISUAL=nvim
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 export DOCKER_API_VERSION=1.43
+
+
+# Funzione Fastfetch Responsive
+fast() {
+    # Se la larghezza del terminale è minore di 90 colonne
+    if [ "$COLUMNS" -lt 90 ]; then
+        # Nasconde il logo e rimuove il padding per risparmiare spazio
+        fastfetch --logo none
+    # Se la larghezza è tra 90 e 120 colonne (spazio medio)
+    elif [ "$COLUMNS" -lt 120 ]; then
+        # Usa il logo, ma ne forza una dimensione più piccola
+        fastfetch --logo-width 6 --logo-height 12
+    # Altrimenti (spazio ampio, finestra intera)
+    else
+        # Lancia Fastfetch normalmente usando il tuo config.json
+        fastfetch
+    fi
+}

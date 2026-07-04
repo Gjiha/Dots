@@ -1,0 +1,219 @@
+{
+    "logo": {
+        "type": "auto",
+        "source": "~/.config/fastfetch/image.txt",
+        "width": 3,
+        "padding": {
+            "top": 2,
+            "left": 2,
+            "right": 1
+        }
+    },
+    "display": {
+        "separator": " ",
+        "constants": [
+            "\u001b[35;1m",    // {$1} - Arancione (Mappato sul Magenta dal tuo tema)
+            "\u001b[31;1m",    // {$2} - Rosso (Icone Hardware e Connection)
+            "\u001b[90;1m",    // {$3} - Grigio Scuro (Rami)
+            "\u001b[37;1m",    // {$4} - Bianco
+            "┌──────",         // {$5}
+            "───────",         // {$6}
+            "──────",          // {$7}
+            "\u001b[38;5;135m" // {$8} - Viola (Icone Software e Time)
+        ],
+        "percent": {
+            "type": 9
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "version",
+            "color": {
+                "keys": ""
+            },
+            "key": "{$1}                󱐋󱐋 Fastfetch ",
+            "format": "{$4}{2}"
+        },
+        {
+            "type": "custom",
+            "format": "{$3}{$5}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$7} {$8}Hardware "
+        },
+        {
+            "type": "host",
+            "key": "{$3}├ {$2} {$1}PC         "
+        },
+        {
+            "type": "board",
+            "key": "{$3}├ {$2}󱔼 {$1}Board      "
+        },
+        {
+            "type": "cpu",
+            "key": "{$3}├ {$2} {$1}CPU        ",
+            "showPeCoreCount": false,
+            "temp": false
+        },
+        {
+            "type": "gpu",
+            "key": "{$3}├ {$2}󰾲 {$1}GPU        ",
+            "hideType": "pci"
+        },
+        {
+            "type": "display",
+            "key": "{$3}├ {$2}󰍹 {$1}Display    ",
+            "compactType": "original"
+        },
+        {
+            "type": "battery",
+            "key": "{$3}├ {$2}󰢟 {$1}Battery    ",
+            "format": "{manufacturer} {model-name} ({capacity})",
+            "temp": true
+        },
+        {
+            "type": "memory",
+            "key": "{$3}├ {$2} {$1}Memory     ",
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "swap",
+            "key": "{$3}├ {$2}󰯍 {$1}Swap       ",
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "disk",
+            "key": "{$3}├ {$2} {$1}Fedora     ",
+            "folders": ["/"],
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "disk",
+            "key": "{$3}├ {$2} {$1}Games      ",
+            "folders": ["/mnt/c30f4f52-994d-4076-b4cd-5edb0d09e6ef"],
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "disk",
+            "key": "{$3}└ {$2} {$1}Windows    ",
+            "folders": ["/mnt/D62476C62476A8DF"],
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "custom",
+            "format": "{$3}{$5}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$7} {$2}Software "
+        },
+        {
+            "type": "os",
+            "key": "{$3}├ {$8} {$1}Distro     ",
+            "format": "{name} {build-id} {arch}"
+        },
+        {
+            "type": "kernel",
+            "key": "{$3}├ {$8} {$1}Kernel     "
+        },
+        {
+            "type": "packages",
+            "key": "{$3}├ {$8}󰏖 {$1}Packages   "
+        },
+        {
+            "type": "processes",
+            "key": "{$3}├ {$8}󰑮 {$1}Processes  "
+        },
+        {
+            "type": "shell",
+            "key": "{$3}├ {$8} {$1}Shell      "
+        },
+        {
+            "type": "terminal",
+            "key": "{$3}├ {$8} {$1}Terminal   "
+        },
+        {
+            "type": "terminalfont",
+            "key": "{$3}├ {$8}󰛖 {$1}Term Font  "
+        },
+        {
+            "type": "de",
+            "key": "{$3}├ {$8} {$1}DE         "
+        },
+        {
+            "type": "wm",
+            "key": "{$3}├ {$8} {$1}Window     "
+        },
+        {
+            "type": "wmtheme",
+            "key": "{$3}├ {$8}󰉼 {$1}Theme      "
+        },
+        {
+            "type": "font",
+            "key": "{$3}├ {$8}󰛖 {$1}Font       "
+        },
+        {
+            "type": "custom",
+            "format": "{$3}{$5}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$7} {$8}Connection"
+        },
+        {
+            "type": "bluetooth",
+            "key": "{$3}├ {$2}󰂱 {$1}Bluetooth  ",
+            "format": "{1} - {4}"
+        },
+        {
+            "type": "wifi",
+            "key": "{$3}├ {$2} {$1}WiFi       ",
+            "format": "{4} - {7} - {13} GHz",
+            "showErrors": "never"
+        },
+        {
+            "type": "localip",
+            "key": "{$3}├ {$2}󰩟 {$1}Local IP   ",
+            "format": "{1}",
+            "showMac": false,
+            "showAllIps": false
+        },
+        {
+            "type": "publicip",
+            "key": "{$3}└ {$2}󰩠 {$1}Public IP  ",
+            "timeout": 1000
+        },
+        {
+            "type": "custom",
+            "format": "{$3}{$5}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$6}{$7} {$2}Time "
+        },
+        {
+            "type": "DateTime",
+            "key": "{$3}├ {$8}󰥔 {$1}Date/Time  "
+        },
+        {
+            "type": "disk",
+            "key": "{$3}├ {$8} {$1}OS Age     ",
+            "folders": ["/"],
+            "format": "{create-time:10} ({days} days)"
+        },
+        {
+            "type": "uptime",
+            "key": "{$3}└ {$8} {$1}Uptime     "
+        },
+        {
+            "type": "custom",
+            "format": "                {$1}* {$2}* {$8}* {$1}* {$2}* {$8}* {$1}* {$2}* {$8}* {$1}*"
+        }
+    ]
+}
