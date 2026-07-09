@@ -89,7 +89,7 @@
         },
         {
             "type": "disk",
-            "key": "{$3}├ {$2} {$1}Fedora     ",
+            "key": "{$3}└ {$2} {$1}Fedora     ",
             "folders": ["/"],
             "percent": {
                 "type": 3,
@@ -156,7 +156,7 @@
         },
         {
             "type": "wm",
-            "key": "{$3}├ {$8} {$1}Window     "
+            "key": "{$3}└ {$8} {$1}Window     "
         },
         {
             "type": "wmtheme",
