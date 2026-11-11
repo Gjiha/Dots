@@ -156,11 +156,11 @@
         },
         {
             "type": "wm",
-            "key": "{$3}└ {$8} {$1}Window     "
+            "key": "{$3}├ {$8} {$1}Window     "
         },
         {
             "type": "wmtheme",
-            "key": "{$3}├ {$8}󰉼 {$1}Theme      "
+            "key": "{$3}└ {$8}󰉼 {$1}Theme      "
         },
         {
             "type": "font",
